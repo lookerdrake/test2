@@ -16,4 +16,5 @@ label: "First Model"
 
 explore: users {
   label: "Users"
+  group_label: "DW Localization"
 }
