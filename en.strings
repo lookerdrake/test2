@@ -37,5 +37,5 @@
 "DW Localization" = "DW Localization";
 
 //Values for Gender
-"gender_key_en" = "Male";
-"gender_key_mx" = "Female";
+"gender_key_male" = "Male";
+"gender_key_female" = "Female";

@@ -52,9 +52,9 @@ view: users {
     label: "Gender"
     type: string
     sql:
-     case
-      when '{{ _user_attributes["locale"] }}' = 'en' THEN '{{ _localization["gender_key_en"]}}'
-      when '{{ _user_attributes["locale"] }}' = 'es_MX' THEN '{{ _localization["gender_key_mx]}}'
+     case ${TABLE}."GENDER"
+      when 'Male' then '{{ _localization["gender_key_male"]}}'
+      when 'Female' then '{{ _localization["gender_key_female]}}'
     end ;;
   }
 
