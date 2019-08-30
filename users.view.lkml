@@ -54,7 +54,7 @@ view: users {
     sql:
      case ${TABLE}."GENDER"
       when 'Male' then '{{ _localization["gender_key_male"]}}'
-      when 'Female' then '{{ _localization["gender_key_female]}}'
+      when 'Female' then '{{ _localization["gender_key_female"]}}'
     end ;;
   }
 
