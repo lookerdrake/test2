@@ -51,7 +51,15 @@ view: users {
   dimension: gender {
     label: "Gender"
     type: string
-    sql: ${TABLE}."GENDER" ;;
+    sql:
+     case
+      when '{{ _user_attributes["locale"] }}' = 'en' THEN ${TABLE}."GENDER"
+      when '{{ _user_attributes["locale"] }}' = 'es_MX' THEN
+        CASE
+          WHEN ${TABLE}."GENDER" = 'Male' THEN 'Hombre'
+          ELSE 'Mujer'
+        END
+    end ;;
   }
 
   dimension: last_name {
