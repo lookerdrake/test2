@@ -9,7 +9,7 @@
     type: looker_column
     fields: [users.gender, users.count]
     filters:
-      users.gender:{{ _localization["gender_key_male"]}}
+      users.gender: Male
     sorts: [users.count desc]
     limit: 500
     query_timezone: UTC
@@ -35,3 +35,27 @@
     col: 11
     width: 13
     height: 6
+  - title: liquid_test
+    name: liquid_test
+    model: dw_localization
+    explore: users
+    type: looker_column
+    fields: [users.gender, users.count]
+    filters: {}
+    sorts: [users.count desc]
+    limit: 500
+    query_timezone: UTC
+    series_types: {}
+    listen:
+      filter_title: users.gender
+    row: 6
+    col: 3
+    width: 11
+    height: 6
+  filters:
+  - name: filter_title
+    title: filter_title
+    type: string_filter
+    default_value: '"{{ _localization[\"gender_key_male\"]}}"'
+    allow_multiple_values: true
+    required: false

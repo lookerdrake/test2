@@ -40,6 +40,8 @@
 "Localization Testing" = "Localization Testing";
 "with only en_US Filter" = "with only en_US Filter";
 "with en_US and es_ES filters" = "with en_US and es_ES filters";
+"liquid_test" = "liquid_test";
+"filter_title" = "filter_title";
 
 // Genders
 "gender_key_male" = "Hombre";
