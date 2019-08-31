@@ -42,6 +42,7 @@
 "with en_US and es_ES filters" = "with en_US and es_ES filters";
 "liquid_test" = "liquid_test";
 "filter_title" = "filter_title";
+"db_filter_test" = "db_filter_test";
 
 // Genders
 "gender_key_male" = "Hombre";

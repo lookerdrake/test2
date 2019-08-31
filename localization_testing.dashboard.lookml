@@ -47,9 +47,26 @@
     limit: 500
     query_timezone: UTC
     series_types: {}
+    listen: {}
     row: 6
     col: 0
     width: 11
+    height: 6
+  - title: db_filter_test
+    name: db_filter_test
+    model: dw_localization
+    explore: users
+    type: looker_column
+    fields: [users.gender, users.count]
+    sorts: [users.count desc]
+    limit: 500
+    query_timezone: UTC
+    series_types: {}
+    listen:
+      filter_title: users.gender
+    row: 6
+    col: 11
+    width: 13
     height: 6
   filters:
   - name: filter_title
