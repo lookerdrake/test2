@@ -33,9 +33,14 @@
 "Users" = "Los Usuarios";
 
 // Model File
-"First Model" = "El Primero Model";
+"First Model" = "First Model";
 "DW Localization" = "DW Localization";
 
+// LookML Dashboard
+"Localization Testing" = "Localization Testing";
+"with only en_US Filter" = "with only en_US Filter";
+"with en_US and es_ES filters" = "with en_US and es_ES filters";
+
 // Genders
-"gender_key_male" = "Hombre";
-"gender_key_female" = "Mujer";
+"gender_key_male" = "Male";
+"gender_key_female" = "Female";
