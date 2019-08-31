@@ -42,7 +42,7 @@
     type: looker_column
     fields: [users.gender, users.count]
     filters:
-      users.gender: "'{{ _localization[\"gender_key_male\"]}}'"
+      users.gender: "{{ _localization['gender_key_male']}}"
     sorts: [users.count desc]
     limit: 500
     query_timezone: UTC
@@ -72,6 +72,6 @@
   - name: filter_title
     title: filter_title
     type: string_filter
-    default_value: "'{{ _localization[\"gender_key_male\"]}}'"
+    default_value: "{{ _localization['gender_key_male']}}"
     allow_multiple_values: true
     required: false
