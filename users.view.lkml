@@ -63,7 +63,7 @@ view: users {
     type: string
     sql:
     {% if _user_attributes['locale'] == 'en' %} ${country}
-    {% elsif _user_attributes['locale'] == 'es_ES' %} ${state} }
+    {% elsif _user_attributes['locale'] == 'es_ES' %} ${state}
     {% endif %} ;;
   }
 
