@@ -42,5 +42,5 @@
 "with en_US and es_ES filters" = "with en_US and es_ES filters";
 
 // Genders
-"gender_key_male" = "Male";
-"gender_key_female" = "Female";
+"gender_key_male" = "Hombre";
+"gender_key_female" = "Mujer";
