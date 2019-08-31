@@ -31,6 +31,7 @@
 "State" = "Estado";
 "Count" = "Cuenta";
 "Users" = "Los Usuarios";
+"Locale-based column" = "Locale-based column";
 
 // Model File
 "First Model" = "First Model";

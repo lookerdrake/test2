@@ -58,6 +58,15 @@ view: users {
     end ;;
   }
 
+  dimension: test_label {
+    label: "Locale-based column"
+    type: string
+    sql:
+    {% if _user_attributes['locale'] == 'en' %} ${country}
+    {% elsif _user_attributes['locale'] == 'es_ES' %} ${state} }
+    {% endif %} ;;
+  }
+
   dimension: last_name {
     label: "Last Name"
     type: string
