@@ -51,3 +51,10 @@
     col: 0
     width: 11
     height: 6
+  filters:
+  - name: filter_title
+    title: filter_title
+    type: string_filter
+    default_value: "'{{ _localization[\"gender_key_male\"]}}'"
+    allow_multiple_values: true
+    required: false
