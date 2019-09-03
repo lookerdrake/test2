@@ -48,6 +48,14 @@ view: users {
     sql: ${TABLE}."FIRST_NAME" ;;
   }
 
+
+
+
+
+
+
+## Use case 1: localizing returned values from a table
+## two values: 'Male', 'Female
   dimension: gender {
     label: "Gender"
     type: string
@@ -58,6 +66,13 @@ view: users {
     end ;;
   }
 
+
+
+
+
+
+## Use case 2: localization causing different columns to be pulled within the SQL
+## US customers will be returned the 'Country' column, ES customers the 'State' column
   dimension: test_label {
     label: "Locale-based column"
     type: string
@@ -66,6 +81,18 @@ view: users {
     {% elsif _user_attributes['locale'] == 'es_ES' %} ${state}
     {% endif %} ;;
   }
+
+
+
+
+
+
+
+
+
+
+
+
 
   dimension: last_name {
     label: "Last Name"

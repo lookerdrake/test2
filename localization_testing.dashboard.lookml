@@ -92,3 +92,9 @@
     default_value: "{{ _localization['gender_key_male']}}"
     allow_multiple_values: true
     required: false
+  - name: usecase_2
+    title: usecase_2
+    type: string_filter
+    default_value: "{{ _localization['state_key_ca']}}"
+    allow_multiple_values: true
+    required: false
