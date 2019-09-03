@@ -75,7 +75,7 @@
     type: looker_column
     fields: [users.test_label, users.count]
     filters:
-      users.gender: Male,Hombre
+      users.test_label: "{{ _localization['state_key_ca']}}"
     sorts: [users.count desc]
     limit: 500
     query_timezone: UTC
@@ -84,6 +84,7 @@
     col: 0
     width: 13
     height: 6
+
   filters:
   - name: filter_title
     title: filter_title

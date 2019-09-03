@@ -49,3 +49,5 @@
 // Genders
 "gender_key_male" = "Male";
 "gender_key_female" = "Female";
+
+"state_key_ca" = "California EN";
