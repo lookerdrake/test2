@@ -1,5 +1,7 @@
 view: users {
-  sql_table_name: PUBLIC.USERS ;;
+  derived_table: {
+    sql: select * from public.users ;;
+  }
   label: "Users"
 
   dimension: id {
