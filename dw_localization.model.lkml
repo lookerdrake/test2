@@ -1,7 +1,10 @@
-connection: "snowlooker"
+
+# For profservices: connection: "snowlooker"
+connection: "thelook_snowflake"
 
 # include all the views
 include: "*.view"
+include: "localization_testing.dashboard"
 label: "First Model"
 
 #explore: order_items {

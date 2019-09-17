@@ -31,11 +31,23 @@
 "State" = "State";
 "Count" = "Count";
 "Users" = "Users";
+"Locale-based column" = "Locale-based column";
 
 // Model File
 "First Model" = "First Model";
 "DW Localization" = "DW Localization";
 
-//Values for Gender
+// LookML Dashboard
+"Localization Testing" = "Localization Testing";
+"with only en_US Filter" = "with only en_US Filter";
+"with en_US and es_ES filters" = "with en_US and es_ES filters";
+"liquid_test" = "liquid_test";
+"filter_title" = "filter_title";
+"db_filter_test" = "db_filter_test";
+"liquid_variable_field" = "liquid_variable_field";
+"usecase_2" = "usecase_2";
+
+// Genders
 "gender_key_male" = "Male";
 "gender_key_female" = "Female";
+"state_key_ca" = "USA";

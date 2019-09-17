@@ -19,18 +19,18 @@
 
 // Users View File
 "ID" = "ID";
-"Age" = "Edad";
-"City"= "Ciudad";
-"Country" = "País";
-"Created Date" = "Día de Creación";
+"Age" = "Age";
+"City"= "City";
+"Country" = "Country";
+"Created Date" = "Created Date";
 "Email" = "Email";
-"First Name" = "Nombre Primero";
-"Gender" = "Género";
-"Last Name" = "Nombre Segundo";
-"Full Name" = "Nombre Total";
-"State" = "Estado";
-"Count" = "Cuenta";
-"Users" = "Los Usuarios";
+"First Name" = "First Name";
+"Gender" = "Gender";
+"Last Name" = "Last Name";
+"Full Name" = "Full Name";
+"State" = "State";
+"Count" = "Count";
+"Users" = "Users";
 "Locale-based column" = "Locale-based column";
 
 // Model File
@@ -48,6 +48,7 @@
 "usecase_2" = "usecase_2";
 
 // Genders
-"gender_key_male" = "Hombre";
-"gender_key_female" = "Mujer";
-"state_key_ca" = "California";
+"gender_key_male" = "Male";
+"gender_key_female" = "Female";
+
+"state_key_ca" = "USA";
