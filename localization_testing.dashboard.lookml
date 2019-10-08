@@ -1,5 +1,5 @@
 - dashboard: localization_testing
-  title: Localization Testing
+  title: 🦆🦆🦆
   layout: newspaper
   elements:
   - title: with only en_US Filter
