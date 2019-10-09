@@ -1,0 +1,54 @@
+// The name of this file should be the associated locale code followed by ".strings",
+// e.g. "en_US.strings"
+//
+// There is one .strings file per locale.
+//
+// Define your translated strings one line at a time like so:
+// "My Key" = "My Translation";
+// "My Other Key" = "My Other Translation";
+//
+// Keys can be any string; choose whatever scheme helps you stay organized.
+//
+// For example:
+// "my.more.programmatic.key" = "A Translation";
+//
+// Then, set your LookML label and description parameters to the desired key values.
+//
+// To choose this file as the master key list and as the one to validate against,
+// set its locale code ("en") as the default_locale in the manifest file.
+
+// Users View File
+"ID" = "ID";
+"Age" = "Edad";
+"City"= "Ciudad";
+"Country" = "País";
+"Created Date" = "Día de Creación";
+"Email" = "Email";
+"First Name" = "Nombre Primero";
+"Gender" = "Género";
+"Last Name" = "Nombre Segundo";
+"Full Name" = "Nombre Total";
+"State" = "Estado";
+"Count" = "Cuenta";
+"Users" = "Los Usuarios";
+"Locale-based column" = "Locale-based column";
+
+// Model File
+"First Model" = "First Model";
+"DW Localization" = "DW Localization";
+
+// LookML Dashboard
+"Localization Testing" = "Localization Testing";
+"🦆🦆🦆" = "pato-pato-pato";
+"with only en_US Filter" = "with only en_US Filter";
+"with en_US and es_ES filters" = "with en_US and es_ES filters";
+"liquid_test" = "liquid_test";
+"filter_title" = "filter_title";
+"db_filter_test" = "db_filter_test";
+"liquid_variable_field" = "liquid_variable_field";
+"usecase_2" = "usecase_2";
+
+// Genders
+"gender_key_male" = "Hombre";
+"gender_key_female" = "Mujer";
+"state_key_ca" = "California";

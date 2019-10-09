@@ -1,86 +1,120 @@
 view: users {
-  sql_table_name: demo_db.users ;;
+  sql_table_name: PUBLIC.USERS ;;
+  label: "Users"
 
   dimension: id {
+    hidden: yes
+    label: "ID"
     primary_key: yes
     type: number
-    sql: ${TABLE}.id ;;
+    sql: ${TABLE}."ID" ;;
   }
 
   dimension: age {
+    label: "Age"
     type: number
-    sql: ${TABLE}.age ;;
+    sql: ${TABLE}."AGE" ;;
   }
 
   dimension: city {
+    label: "City"
     type: string
-    sql: ${TABLE}.city ;;
+    sql: ${TABLE}."CITY" ;;
   }
 
   dimension: country {
+    label: "Country"
     type: string
     map_layer_name: countries
-    sql: ${TABLE}.country ;;
+    sql: ${TABLE}."COUNTRY" ;;
   }
 
-  dimension_group: created {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}.created_at ;;
+  dimension: created_date {
+    label: "Created Date"
+    type: date
+    sql: ${TABLE}."CREATED_AT" ;;
   }
+
 
   dimension: email {
+    label: "Email"
     type: string
-    sql: ${TABLE}.email ;;
+    sql: ${TABLE}."EMAIL" ;;
   }
 
   dimension: first_name {
+    label: "First Name"
     type: string
-    sql: ${TABLE}.first_name ;;
+    sql: ${TABLE}."FIRST_NAME" ;;
   }
 
+
+
+
+
+
+
+## Use case 1: localizing returned values from a table
+## two values: 'Male', 'Female
   dimension: gender {
+    label: "Gender"
     type: string
-    sql: ${TABLE}.gender ;;
+    sql:
+     case ${TABLE}."GENDER"
+      when 'Male' then '{{ _localization["gender_key_male"]}}'
+      when 'Female' then '{{ _localization["gender_key_female"]}}'
+    end ;;
   }
+
+
+
+
+
+
+## Use case 2: localization causing different columns to be pulled within the SQL
+## US customers will be returned the 'Country' column, ES customers the 'State' column
+  dimension: test_label {
+    label: "Locale-based column"
+    type: string
+    sql:
+    {% if _user_attributes['locale'] == 'en' %} ${country}
+    {% elsif _user_attributes['locale'] == 'es_ES' %} ${state}
+    {% endif %} ;;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
   dimension: last_name {
+    label: "Last Name"
     type: string
-    sql: ${TABLE}.last_name ;;
+    sql: ${TABLE}."LAST_NAME" ;;
+  }
+
+  dimension: full_name {
+    label: "Full Name"
+    type: string
+    sql: CONCAT(${first_name}, ' ', ${last_name}) ;;
   }
 
   dimension: state {
+    label: "State"
     type: string
-    sql: ${TABLE}.state ;;
-  }
-
-  dimension: zip {
-    type: zipcode
-    sql: ${TABLE}.zip ;;
+    sql: ${TABLE}."STATE" ;;
   }
 
   measure: count {
+    label: "Count"
     type: count
-    drill_fields: [detail*]
-  }
-
-  # ----- Sets of fields for drilling ------
-  set: detail {
-    fields: [
-      id,
-      first_name,
-      last_name,
-      events.count,
-      orders.count,
-      user_data.count
-    ]
+    drill_fields: [id, first_name, last_name, events.count, order_items.count]
   }
 }
