@@ -37,7 +37,7 @@ view: users {
   }
 
   dimension: displayed_date {
-    label: "Displayed Date"
+    label: "A12345"
     type: date
     sql: ${created_date} ;;
     html: {{ localized_date_filter._rendered_value }} ;;
