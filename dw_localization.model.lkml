@@ -1,6 +1,6 @@
 
 # For profservices: connection: "snowlooker"
-connection: "thelook_snowflake"
+connection: "thelook_events"
 
 # include all the views
 include: "*.view"

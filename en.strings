@@ -32,6 +32,8 @@
 "Count" = "Count";
 "Users" = "Users";
 "Locale-based column" = "Locale-based column";
+"Localized Date" = "Localized Date";
+"Displayed Date" = "Displayed Date";
 
 // Model File
 "First Model" = "First Model";

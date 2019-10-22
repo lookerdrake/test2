@@ -30,9 +30,29 @@ view: users {
   }
 
   dimension: created_date {
+    hidden: no
     label: "Created Date"
-    type: date
+    type: string
     sql: ${TABLE}."CREATED_AT" ;;
+  }
+
+  dimension: displayed_date {
+    label: "Displayed Date"
+    type: date
+    sql: ${created_date} ;;
+    html: {{ localized_date_filter._rendered_value }} ;;
+  }
+
+  dimension: localized_date_filter {
+    label: "Localized Date"
+    type: string
+    sql:
+    {% if _user_attributes['locale'] == 'en' %} to_char(${created_date}, 'MM-DD-YYYY')
+    {% elsif _user_attributes['locale'] == 'es_ES' %} to_char(${created_date}, 'DD-MM-YYYY')
+    {% else %}
+    ${created_date}
+
+    {% endif %} ;;
   }
 
 
